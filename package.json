@@ -1,6 +1,6 @@
 {
   "name": "@kadoresmi00/logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "It allows logging in the local folder.",
   "main": "index.js",
   "scripts": {

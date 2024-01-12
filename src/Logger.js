@@ -45,8 +45,9 @@ class Logger {
       const date = new Date();
       const fileNameDate = frequency === 'monthly' ? `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}` : `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
       const fileName = `${fileNameDate}.log`;
-      const logsDirectory = path.join(__dirname, '..', 'logs');
+      const logsDirectory = path.join(process.cwd(), 'logs');
       const filePath = path.join(logsDirectory, fileName);
+      console.log(filePath);
       const time = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
 
       const data = `[${time}] [${level.toUpperCase()}] ${message}`;
